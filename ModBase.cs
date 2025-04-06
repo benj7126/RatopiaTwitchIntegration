@@ -37,6 +37,7 @@ namespace RatopiaTwitchIntegration
 
             configSampleSize = Config.Bind("General", "Sample Size", 100, "Top x latest chatters to pick new citizens from.\nLess than 0 for ANY during this session, note that might create duplicates.");
             configLowerCaseStream = Config.Bind("General", "Steam name", "[stream]", "The stream name in lower case.");
+            
             writeMessages = Config.Bind("General", "Write text", true, "Do write chat messages.");
             offset = Config.Bind("General", "Text offset", new UnityEngine.Vector3(0, 1.3f, 0), "Offset to write messages with.");
 
@@ -44,7 +45,7 @@ namespace RatopiaTwitchIntegration
 
             mls = Logger;
 
-            tUsers.Init("catnulll", "");
+            tUsers.Init(configLowerCaseStream.Value, "");
 
             harmony.PatchAll();
         }
