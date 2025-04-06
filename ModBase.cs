@@ -39,7 +39,7 @@ namespace RatopiaTwitchIntegration
             configLowerCaseStream = Config.Bind("General", "Steam name", "[stream]", "The stream name in lower case.");
             
             writeMessages = Config.Bind("General", "Write text", true, "Do write chat messages.");
-            offset = Config.Bind("General", "Text offset", new UnityEngine.Vector3(0, 1.3f, 0), "Offset to write messages with.");
+            offset = Config.Bind("General", "Text offset", new UnityEngine.Vector3(0, 1f, 0), "Offset to write messages with.");
 
             messageLimit = Config.Bind("General", "How many characters are allowed in a message", 20, "The amount of characters messages get cut down to, -1 of northing, 0 for no messages.");
 

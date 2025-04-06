@@ -178,7 +178,7 @@ namespace RatopiaTwitchIntegration
                                 message = message.Substring(0, ModBase.Instance.messageLimit.Value) + "...";
 
                             GameMgr.Instance._PoolMgr.Pool_GetEffect.GetNextObj().GetComponent<GetEffect>().
-                                GetRefEffect("GameScene/UI/UI_Canvas/Icon/Icon_Language", tm.message, citizen, new Vector3(0f, 1f, 0f));
+                                GetRefEffect("GameScene/UI/UI_Canvas/Icon/Icon_Language", tm.message, citizen, ModBase.Instance.offset.Value);
                         }
 
                         continue;
